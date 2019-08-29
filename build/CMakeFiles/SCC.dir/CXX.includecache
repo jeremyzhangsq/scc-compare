@@ -6,12 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/home/zhangsq/SCC/main.cpp
+/home/zhangsq/scc-compare/main.cpp
 boost/config.hpp
 -
 iostream
 -
 vector
+-
+string
 -
 boost/graph/strong_components.hpp
 -
@@ -22,9 +24,9 @@ boost/graph/graphviz.hpp
 boost/graph/graph_utility.hpp
 -
 snap/snap-core/Snap.h
-/home/zhangsq/SCC/snap/snap-core/Snap.h
+/home/zhangsq/scc-compare/snap/snap-core/Snap.h
 
-/home/zhangsq/SCC/snap/glib-core/base.h
+/home/zhangsq/scc-compare/snap/glib-core/base.h
 windows.h
 -
 winsock2.h
@@ -98,327 +100,327 @@ stdexcept
 omp.h
 -
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 fl.h
-/home/zhangsq/SCC/snap/glib-core/fl.h
+/home/zhangsq/scc-compare/snap/glib-core/fl.h
 dt.h
-/home/zhangsq/SCC/snap/glib-core/dt.h
+/home/zhangsq/scc-compare/snap/glib-core/dt.h
 ut.h
-/home/zhangsq/SCC/snap/glib-core/ut.h
+/home/zhangsq/scc-compare/snap/glib-core/ut.h
 ds.h
-/home/zhangsq/SCC/snap/glib-core/ds.h
+/home/zhangsq/scc-compare/snap/glib-core/ds.h
 bits.h
-/home/zhangsq/SCC/snap/glib-core/bits.h
+/home/zhangsq/scc-compare/snap/glib-core/bits.h
 hash.h
-/home/zhangsq/SCC/snap/glib-core/hash.h
+/home/zhangsq/scc-compare/snap/glib-core/hash.h
 hashmp.h
-/home/zhangsq/SCC/snap/glib-core/hashmp.h
+/home/zhangsq/scc-compare/snap/glib-core/hashmp.h
 xml.h
-/home/zhangsq/SCC/snap/glib-core/xml.h
+/home/zhangsq/scc-compare/snap/glib-core/xml.h
 xmath.h
-/home/zhangsq/SCC/snap/glib-core/xmath.h
+/home/zhangsq/scc-compare/snap/glib-core/xmath.h
 xmlser.h
-/home/zhangsq/SCC/snap/glib-core/xmlser.h
+/home/zhangsq/scc-compare/snap/glib-core/xmlser.h
 unicode.h
-/home/zhangsq/SCC/snap/glib-core/unicode.h
+/home/zhangsq/scc-compare/snap/glib-core/unicode.h
 unicodestring.h
-/home/zhangsq/SCC/snap/glib-core/unicodestring.h
+/home/zhangsq/scc-compare/snap/glib-core/unicodestring.h
 tm.h
-/home/zhangsq/SCC/snap/glib-core/tm.h
+/home/zhangsq/scc-compare/snap/glib-core/tm.h
 shash.h
-/home/zhangsq/SCC/snap/glib-core/shash.h
+/home/zhangsq/scc-compare/snap/glib-core/shash.h
 os.h
-/home/zhangsq/SCC/snap/glib-core/os.h
+/home/zhangsq/scc-compare/snap/glib-core/os.h
 env.h
-/home/zhangsq/SCC/snap/glib-core/env.h
+/home/zhangsq/scc-compare/snap/glib-core/env.h
 wch.h
-/home/zhangsq/SCC/snap/glib-core/wch.h
+/home/zhangsq/scc-compare/snap/glib-core/wch.h
 xfl.h
-/home/zhangsq/SCC/snap/glib-core/xfl.h
+/home/zhangsq/scc-compare/snap/glib-core/xfl.h
 blobbs.h
-/home/zhangsq/SCC/snap/glib-core/blobbs.h
+/home/zhangsq/scc-compare/snap/glib-core/blobbs.h
 lx.h
-/home/zhangsq/SCC/snap/glib-core/lx.h
+/home/zhangsq/scc-compare/snap/glib-core/lx.h
 url.h
-/home/zhangsq/SCC/snap/glib-core/url.h
+/home/zhangsq/scc-compare/snap/glib-core/url.h
 http.h
-/home/zhangsq/SCC/snap/glib-core/http.h
+/home/zhangsq/scc-compare/snap/glib-core/http.h
 html.h
-/home/zhangsq/SCC/snap/glib-core/html.h
+/home/zhangsq/scc-compare/snap/glib-core/html.h
 md5.h
-/home/zhangsq/SCC/snap/glib-core/md5.h
+/home/zhangsq/scc-compare/snap/glib-core/md5.h
 ss.h
-/home/zhangsq/SCC/snap/glib-core/ss.h
+/home/zhangsq/scc-compare/snap/glib-core/ss.h
 ssmp.h
-/home/zhangsq/SCC/snap/glib-core/ssmp.h
+/home/zhangsq/scc-compare/snap/glib-core/ssmp.h
 json.h
-/home/zhangsq/SCC/snap/glib-core/json.h
+/home/zhangsq/scc-compare/snap/glib-core/json.h
 zipfl.h
-/home/zhangsq/SCC/snap/glib-core/zipfl.h
+/home/zhangsq/scc-compare/snap/glib-core/zipfl.h
 
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/bits.h
+/home/zhangsq/scc-compare/snap/glib-core/bits.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/blobbs.h
+/home/zhangsq/scc-compare/snap/glib-core/blobbs.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/ds.h
+/home/zhangsq/scc-compare/snap/glib-core/ds.h
 
-/home/zhangsq/SCC/snap/glib-core/dt.h
+/home/zhangsq/scc-compare/snap/glib-core/dt.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/env.h
+/home/zhangsq/scc-compare/snap/glib-core/env.h
 
-/home/zhangsq/SCC/snap/glib-core/fl.h
+/home/zhangsq/scc-compare/snap/glib-core/fl.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/gnuplot.h
+/home/zhangsq/scc-compare/snap/glib-core/gnuplot.h
 
-/home/zhangsq/SCC/snap/glib-core/hash.h
+/home/zhangsq/scc-compare/snap/glib-core/hash.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 stdio.h
 -
 
-/home/zhangsq/SCC/snap/glib-core/hashmp.h
+/home/zhangsq/scc-compare/snap/glib-core/hashmp.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/html.h
+/home/zhangsq/scc-compare/snap/glib-core/html.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/http.h
+/home/zhangsq/scc-compare/snap/glib-core/http.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/json.h
+/home/zhangsq/scc-compare/snap/glib-core/json.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/linalg.h
+/home/zhangsq/scc-compare/snap/glib-core/linalg.h
 
-/home/zhangsq/SCC/snap/glib-core/lx.h
+/home/zhangsq/scc-compare/snap/glib-core/lx.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/md5.h
+/home/zhangsq/scc-compare/snap/glib-core/md5.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/os.h
+/home/zhangsq/scc-compare/snap/glib-core/os.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/priorityqueue.h
+/home/zhangsq/scc-compare/snap/glib-core/priorityqueue.h
 
-/home/zhangsq/SCC/snap/glib-core/shash.h
+/home/zhangsq/scc-compare/snap/glib-core/shash.h
 
-/home/zhangsq/SCC/snap/glib-core/ss.h
+/home/zhangsq/scc-compare/snap/glib-core/ss.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/ssmp.h
+/home/zhangsq/scc-compare/snap/glib-core/ssmp.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/tm.h
+/home/zhangsq/scc-compare/snap/glib-core/tm.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/unicode.h
+/home/zhangsq/scc-compare/snap/glib-core/unicode.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 new
 -
 
-/home/zhangsq/SCC/snap/glib-core/unicodestring.h
+/home/zhangsq/scc-compare/snap/glib-core/unicodestring.h
 
-/home/zhangsq/SCC/snap/glib-core/url.h
+/home/zhangsq/scc-compare/snap/glib-core/url.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/ut.h
+/home/zhangsq/scc-compare/snap/glib-core/ut.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/wch.h
+/home/zhangsq/scc-compare/snap/glib-core/wch.h
 
-/home/zhangsq/SCC/snap/glib-core/xfl.h
+/home/zhangsq/scc-compare/snap/glib-core/xfl.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/xmath.h
+/home/zhangsq/scc-compare/snap/glib-core/xmath.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/xml.h
+/home/zhangsq/scc-compare/snap/glib-core/xml.h
 bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/glib-core/xmlser.h
+/home/zhangsq/scc-compare/snap/glib-core/xmlser.h
 
-/home/zhangsq/SCC/snap/glib-core/zipfl.h
+/home/zhangsq/scc-compare/snap/glib-core/zipfl.h
 
-/home/zhangsq/SCC/snap/snap-core/Snap.h
+/home/zhangsq/scc-compare/snap/snap-core/Snap.h
 ../glib-core/base.h
-/home/zhangsq/SCC/snap/glib-core/base.h
+/home/zhangsq/scc-compare/snap/glib-core/base.h
 ../glib-core/gnuplot.h
-/home/zhangsq/SCC/snap/glib-core/gnuplot.h
+/home/zhangsq/scc-compare/snap/glib-core/gnuplot.h
 ../glib-core/linalg.h
-/home/zhangsq/SCC/snap/glib-core/linalg.h
+/home/zhangsq/scc-compare/snap/glib-core/linalg.h
 gbase.h
-/home/zhangsq/SCC/snap/snap-core/gbase.h
+/home/zhangsq/scc-compare/snap/snap-core/gbase.h
 util.h
-/home/zhangsq/SCC/snap/snap-core/util.h
+/home/zhangsq/scc-compare/snap/snap-core/util.h
 attr.h
-/home/zhangsq/SCC/snap/snap-core/attr.h
+/home/zhangsq/scc-compare/snap/snap-core/attr.h
 graph.h
-/home/zhangsq/SCC/snap/snap-core/graph.h
+/home/zhangsq/scc-compare/snap/snap-core/graph.h
 graphmp.h
-/home/zhangsq/SCC/snap/snap-core/graphmp.h
+/home/zhangsq/scc-compare/snap/snap-core/graphmp.h
 network.h
-/home/zhangsq/SCC/snap/snap-core/network.h
+/home/zhangsq/scc-compare/snap/snap-core/network.h
 networkmp.h
-/home/zhangsq/SCC/snap/snap-core/networkmp.h
+/home/zhangsq/scc-compare/snap/snap-core/networkmp.h
 bignet.h
-/home/zhangsq/SCC/snap/snap-core/bignet.h
+/home/zhangsq/scc-compare/snap/snap-core/bignet.h
 timenet.h
-/home/zhangsq/SCC/snap/snap-core/timenet.h
+/home/zhangsq/scc-compare/snap/snap-core/timenet.h
 mmnet.h
-/home/zhangsq/SCC/snap/snap-core/mmnet.h
+/home/zhangsq/scc-compare/snap/snap-core/mmnet.h
 table.h
-/home/zhangsq/SCC/snap/snap-core/table.h
+/home/zhangsq/scc-compare/snap/snap-core/table.h
 conv.h
-/home/zhangsq/SCC/snap/snap-core/conv.h
+/home/zhangsq/scc-compare/snap/snap-core/conv.h
 numpy.h
-/home/zhangsq/SCC/snap/snap-core/numpy.h
+/home/zhangsq/scc-compare/snap/snap-core/numpy.h
 subgraph.h
-/home/zhangsq/SCC/snap/snap-core/subgraph.h
+/home/zhangsq/scc-compare/snap/snap-core/subgraph.h
 anf.h
-/home/zhangsq/SCC/snap/snap-core/anf.h
+/home/zhangsq/scc-compare/snap/snap-core/anf.h
 bfsdfs.h
-/home/zhangsq/SCC/snap/snap-core/bfsdfs.h
+/home/zhangsq/scc-compare/snap/snap-core/bfsdfs.h
 cncom.h
-/home/zhangsq/SCC/snap/snap-core/cncom.h
+/home/zhangsq/scc-compare/snap/snap-core/cncom.h
 kcore.h
-/home/zhangsq/SCC/snap/snap-core/kcore.h
+/home/zhangsq/scc-compare/snap/snap-core/kcore.h
 alg.h
-/home/zhangsq/SCC/snap/snap-core/alg.h
+/home/zhangsq/scc-compare/snap/snap-core/alg.h
 triad.h
-/home/zhangsq/SCC/snap/snap-core/triad.h
+/home/zhangsq/scc-compare/snap/snap-core/triad.h
 gsvd.h
-/home/zhangsq/SCC/snap/snap-core/gsvd.h
+/home/zhangsq/scc-compare/snap/snap-core/gsvd.h
 gstat.h
-/home/zhangsq/SCC/snap/snap-core/gstat.h
+/home/zhangsq/scc-compare/snap/snap-core/gstat.h
 centr.h
-/home/zhangsq/SCC/snap/snap-core/centr.h
+/home/zhangsq/scc-compare/snap/snap-core/centr.h
 cmty.h
-/home/zhangsq/SCC/snap/snap-core/cmty.h
+/home/zhangsq/scc-compare/snap/snap-core/cmty.h
 flow.h
-/home/zhangsq/SCC/snap/snap-core/flow.h
+/home/zhangsq/scc-compare/snap/snap-core/flow.h
 coreper.h
-/home/zhangsq/SCC/snap/snap-core/coreper.h
+/home/zhangsq/scc-compare/snap/snap-core/coreper.h
 randwalk.h
-/home/zhangsq/SCC/snap/snap-core/randwalk.h
+/home/zhangsq/scc-compare/snap/snap-core/randwalk.h
 casc.h
-/home/zhangsq/SCC/snap/snap-core/casc.h
+/home/zhangsq/scc-compare/snap/snap-core/casc.h
 sim.h
-/home/zhangsq/SCC/snap/snap-core/sim.h
+/home/zhangsq/scc-compare/snap/snap-core/sim.h
 ggen.h
-/home/zhangsq/SCC/snap/snap-core/ggen.h
+/home/zhangsq/scc-compare/snap/snap-core/ggen.h
 ff.h
-/home/zhangsq/SCC/snap/snap-core/ff.h
+/home/zhangsq/scc-compare/snap/snap-core/ff.h
 gio.h
-/home/zhangsq/SCC/snap/snap-core/gio.h
+/home/zhangsq/scc-compare/snap/snap-core/gio.h
 gviz.h
-/home/zhangsq/SCC/snap/snap-core/gviz.h
+/home/zhangsq/scc-compare/snap/snap-core/gviz.h
 ghash.h
-/home/zhangsq/SCC/snap/snap-core/ghash.h
+/home/zhangsq/scc-compare/snap/snap-core/ghash.h
 statplot.h
-/home/zhangsq/SCC/snap/snap-core/statplot.h
+/home/zhangsq/scc-compare/snap/snap-core/statplot.h
 
-/home/zhangsq/SCC/snap/snap-core/alg.h
+/home/zhangsq/scc-compare/snap/snap-core/alg.h
 
-/home/zhangsq/SCC/snap/snap-core/anf.h
+/home/zhangsq/scc-compare/snap/snap-core/anf.h
 
-/home/zhangsq/SCC/snap/snap-core/attr.h
+/home/zhangsq/scc-compare/snap/snap-core/attr.h
 
-/home/zhangsq/SCC/snap/snap-core/bfsdfs.h
+/home/zhangsq/scc-compare/snap/snap-core/bfsdfs.h
 
-/home/zhangsq/SCC/snap/snap-core/bignet.h
+/home/zhangsq/scc-compare/snap/snap-core/bignet.h
 
-/home/zhangsq/SCC/snap/snap-core/casc.h
+/home/zhangsq/scc-compare/snap/snap-core/casc.h
 
-/home/zhangsq/SCC/snap/snap-core/centr.h
+/home/zhangsq/scc-compare/snap/snap-core/centr.h
 
-/home/zhangsq/SCC/snap/snap-core/cmty.h
+/home/zhangsq/scc-compare/snap/snap-core/cmty.h
 
-/home/zhangsq/SCC/snap/snap-core/cncom.h
+/home/zhangsq/scc-compare/snap/snap-core/cncom.h
 
-/home/zhangsq/SCC/snap/snap-core/conv.h
+/home/zhangsq/scc-compare/snap/snap-core/conv.h
 
-/home/zhangsq/SCC/snap/snap-core/coreper.h
+/home/zhangsq/scc-compare/snap/snap-core/coreper.h
 
-/home/zhangsq/SCC/snap/snap-core/ff.h
+/home/zhangsq/scc-compare/snap/snap-core/ff.h
 ../glib-core/bd.h
-/home/zhangsq/SCC/snap/glib-core/bd.h
+/home/zhangsq/scc-compare/snap/glib-core/bd.h
 
-/home/zhangsq/SCC/snap/snap-core/flow.h
+/home/zhangsq/scc-compare/snap/snap-core/flow.h
 
-/home/zhangsq/SCC/snap/snap-core/gbase.h
+/home/zhangsq/scc-compare/snap/snap-core/gbase.h
 
-/home/zhangsq/SCC/snap/snap-core/ggen.h
+/home/zhangsq/scc-compare/snap/snap-core/ggen.h
 
-/home/zhangsq/SCC/snap/snap-core/ghash.h
+/home/zhangsq/scc-compare/snap/snap-core/ghash.h
 
-/home/zhangsq/SCC/snap/snap-core/gio.h
+/home/zhangsq/scc-compare/snap/snap-core/gio.h
 
-/home/zhangsq/SCC/snap/snap-core/graph.h
+/home/zhangsq/scc-compare/snap/snap-core/graph.h
 
-/home/zhangsq/SCC/snap/snap-core/graphmp.h
+/home/zhangsq/scc-compare/snap/snap-core/graphmp.h
 
-/home/zhangsq/SCC/snap/snap-core/gstat.h
+/home/zhangsq/scc-compare/snap/snap-core/gstat.h
 
-/home/zhangsq/SCC/snap/snap-core/gsvd.h
+/home/zhangsq/scc-compare/snap/snap-core/gsvd.h
 
-/home/zhangsq/SCC/snap/snap-core/gviz.h
+/home/zhangsq/scc-compare/snap/snap-core/gviz.h
 
-/home/zhangsq/SCC/snap/snap-core/kcore.h
+/home/zhangsq/scc-compare/snap/snap-core/kcore.h
 
-/home/zhangsq/SCC/snap/snap-core/mmnet.h
+/home/zhangsq/scc-compare/snap/snap-core/mmnet.h
 
-/home/zhangsq/SCC/snap/snap-core/network.h
+/home/zhangsq/scc-compare/snap/snap-core/network.h
 
-/home/zhangsq/SCC/snap/snap-core/networkmp.h
+/home/zhangsq/scc-compare/snap/snap-core/networkmp.h
 
-/home/zhangsq/SCC/snap/snap-core/numpy.h
+/home/zhangsq/scc-compare/snap/snap-core/numpy.h
 
-/home/zhangsq/SCC/snap/snap-core/randwalk.h
+/home/zhangsq/scc-compare/snap/snap-core/randwalk.h
 stdio.h
 -
 ../glib-core/priorityqueue.h
-/home/zhangsq/SCC/snap/glib-core/priorityqueue.h
+/home/zhangsq/scc-compare/snap/glib-core/priorityqueue.h
 Snap.h
-/home/zhangsq/SCC/snap/snap-core/Snap.h
+/home/zhangsq/scc-compare/snap/snap-core/Snap.h
 
-/home/zhangsq/SCC/snap/snap-core/sim.h
+/home/zhangsq/scc-compare/snap/snap-core/sim.h
 
-/home/zhangsq/SCC/snap/snap-core/statplot.h
+/home/zhangsq/scc-compare/snap/snap-core/statplot.h
 
-/home/zhangsq/SCC/snap/snap-core/subgraph.h
+/home/zhangsq/scc-compare/snap/snap-core/subgraph.h
 
-/home/zhangsq/SCC/snap/snap-core/table.h
+/home/zhangsq/scc-compare/snap/snap-core/table.h
 
-/home/zhangsq/SCC/snap/snap-core/timenet.h
+/home/zhangsq/scc-compare/snap/snap-core/timenet.h
 
-/home/zhangsq/SCC/snap/snap-core/triad.h
+/home/zhangsq/scc-compare/snap/snap-core/triad.h
 
-/home/zhangsq/SCC/snap/snap-core/util.h
+/home/zhangsq/scc-compare/snap/snap-core/util.h
 

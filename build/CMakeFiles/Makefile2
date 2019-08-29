@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zhangsq/SCC
+CMAKE_SOURCE_DIR = /home/zhangsq/scc-compare
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zhangsq/SCC/build
+CMAKE_BINARY_DIR = /home/zhangsq/scc-compare/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/SCC.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/zhangsq/SCC/build
 CMakeFiles/SCC.dir/all:
 	$(MAKE) -f CMakeFiles/SCC.dir/build.make CMakeFiles/SCC.dir/depend
 	$(MAKE) -f CMakeFiles/SCC.dir/build.make CMakeFiles/SCC.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangsq/SCC/build/CMakeFiles --progress-num=1,2 "Built target SCC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhangsq/scc-compare/build/CMakeFiles --progress-num=1,2 "Built target SCC"
 .PHONY : CMakeFiles/SCC.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/SCC.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SCC.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangsq/SCC/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangsq/scc-compare/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SCC.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangsq/SCC/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhangsq/scc-compare/build/CMakeFiles 0
 .PHONY : CMakeFiles/SCC.dir/rule
 
 # Convenience name for target.

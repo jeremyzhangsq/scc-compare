@@ -1,4 +1,4 @@
-# Install script for directory: /home/zhangsq/SCC
+# Install script for directory: /home/zhangsq/scc-compare
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zhangsq/SCC/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zhangsq/scc-compare/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

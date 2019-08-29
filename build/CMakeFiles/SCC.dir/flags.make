@@ -6,5 +6,5 @@ CXX_FLAGS = -fopenmp   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/zhangsq/SCC/snap/glib-adv -I/home/zhangsq/SCC/snap/glib-core -I/home/zhangsq/SCC/snap/snap-adv -I/home/zhangsq/SCC/snap/snap-core -I/home/zhangsq/SCC/snap/snap-exp 
+CXX_INCLUDES = -I/home/zhangsq/scc-compare/snap/glib-adv -I/home/zhangsq/scc-compare/snap/glib-core -I/home/zhangsq/scc-compare/snap/snap-adv -I/home/zhangsq/scc-compare/snap/snap-core -I/home/zhangsq/scc-compare/snap/snap-exp 
 
