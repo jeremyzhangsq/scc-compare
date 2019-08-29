@@ -1,0 +1,1 @@
+/usr/bin/c++  -fopenmp   CMakeFiles/SCC.dir/main.cpp.o ../snap/snap-core/Snap.o  -o SCC 
