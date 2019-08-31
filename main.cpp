@@ -81,33 +81,10 @@ void sccBySNAP(const PNGraph G){
     printf("SNAP scc:%d\ttime:%.2fs\n",CnComV.Len(),time_by(start));
 }
 
-static vector<Vint > SCCG;
+static vector<Vint> SCCG;
 static Vint DFN, LOW, st, viter, id;
 static int top, Tindex, stop, snum;
 
-
-void tarjan_re(int u, Graph &G){
-    int v;
-    DFN[u] = LOW[u] = ++Tindex;
-    G.visit[u] = true;
-    G.q[++top] = u;
-    for(int &v : G.neighbour[u]) {
-        if (!DFN[v]) {
-            tarjan_re(v,G);
-            if (LOW[v] < LOW[u])
-                LOW[u] = LOW[v];
-        }else if (G.visit[v] && DFN[v] < LOW[u])
-            LOW[u] = DFN[v];
-    }
-    if(DFN[u] == LOW[u]){
-        SCCG.emplace_back(Vint());
-        do{
-            v = G.q[top--];
-            G.visit[v] = false;
-            SCCG.back().push_back(v);
-        }while (v != u);
-    }
-}
 
 void tarjan(int u, Graph &G){
     int v;
@@ -146,43 +123,25 @@ void tarjan(int u, Graph &G){
 
 
 void scc(Graph &G){
-    int vnums = G.vnums;
     double start = clock();
+    int vnums = G.vnums;
     DFN.resize(vnums); LOW.resize(vnums); viter.resize(vnums);st.resize(vnums);id.resize(vnums);
     top=-1; Tindex=0;stop=-1;
     for(int i=0;i<vnums;i++){
         if(!DFN[i])
             tarjan(i,G);
     }
-    Graph SCCG(snum,0);
+    SCCG.resize(snum);
     DFN.assign(vnums,0);
     for(int i=0;i<vnums;i++){
-        for(int &v : G.neighbour[i])
-            SCCG.adduEdge(id[i],id[v]);
-        DFN[id[i]]++;
+        SCCG[id[i]].emplace_back(i);
     }
-//    cout << snum << endl;
-    for(int i=0;i<snum;i++)
-    {
-        int f=0,b=0,spread=0,n_visit_mark = 0;
-        G.q[b++] = i;
-        G.visit[i] = true;
-        G.visit_mark[n_visit_mark++] = i;
-        while (f<b){
-            int u = G.q[f++];
-            spread += DFN[u];
-            for(int n : SCCG.uneighbour[u]){
-                if(!G.visit[n]){
-                    G.q[b++] = n;
-                    G.visit[n] = true;
-                    G.visit_mark[n_visit_mark++] = n;
-                }
-            }
-        }
-        LOW[i] = spread;
-        G.visit.resize(G.vnums,false);
-    }
-    printf("my scc:%d\ttime:%.2fs\n",SCCG.uneighbour.size(),time_by(start));
+    printf("my scc:%d\ttime:%.2fs\n",SCCG.size(),time_by(start));
+//    for(int i=0;i<SCCG.size();i++){
+//        for(int val:SCCG[i])
+//            printf("%d ",val);
+//        printf("\n");
+//    }
     Vint().swap(DFN);
     Vint().swap(LOW);
     Vint().swap(viter);
