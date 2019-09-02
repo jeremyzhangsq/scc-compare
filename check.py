@@ -11,7 +11,7 @@ for l in lines:
 		ac.add(int(ele))
 	scc.append(sorted(ac))
 sccf.close()
-sorted(scc)
+sorted(scc,key=len)
 
 snapf = open(snapname, "r+")
 lines = snapf.readlines()
@@ -27,7 +27,7 @@ for l in lines:
 		ac.add(int(ele))
 	snap.append(sorted(ac))
 snapf.close()
-sorted(snap)
+sorted(snap,key=len)
 flag = 1
 cnt=0
 for item in scc:

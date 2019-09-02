@@ -14,7 +14,7 @@ void read_network_Boost(string file_path, boostGraph &G) {
     int n, m;
     int vi, vj;
     printf("file:%s\n",file_path.c_str());
-    fscanf(fin, "%d\t%d\n", &n,&m);
+    fscanf(fin, "%d%d\n", &n,&m);
     vector<int> node_deg=vector<int>(n);
     printf("nodes:%d  edges:%d\n", n, m);
     for(unsigned int i = 0;i<m;i++)
@@ -32,7 +32,7 @@ void read_network_SNAP(string file_path,const PNGraph G) {
     int n, m;
     int vi, vj;
     printf("file:%s\n",file_path.c_str());
-    fscanf(fin, "%d\t%d\n", &n,&m);
+    fscanf(fin, "%d%d\n", &n,&m);
     vector<int> node_deg=vector<int>(n);
     printf("nodes:%d  edges:%d\n", n, m);
     for (int i = 0; i < n; i++) {
