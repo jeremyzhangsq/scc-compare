@@ -7,8 +7,6 @@
 
 #define SNAP 1
 #define BOOST 2
-#define Vint vector<int>
-#define Vbool vector<bool>
 
 
 #include <boost/config.hpp>
@@ -35,6 +33,7 @@ void read_network_SNAP(string file_path,const PNGraph G);
 void read_network(string file_path, Graph &G);
 void sccByboost(boostGraph &G);
 void sccBySNAP(const PNGraph G);
-void scc(Graph &G);
+vector<vector<int>> scc(Graph &G);
+void output(string name, vector<vector<int>> &G);
 
 #endif //SCC_LIB_H

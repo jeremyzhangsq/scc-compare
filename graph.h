@@ -11,10 +11,10 @@ using namespace std;
 class Graph {
 public:
     unsigned int vnums, enums;
-    vector<Vint> neighbour;
-    Vbool visit;
-    Vint visit_mark;
-    Vint q;
+    vector<vector<int>> neighbour;
+    vector<bool> visit;
+    vector<int> visit_mark;
+    vector<int> q;
     Graph() = default;
     Graph(unsigned int v, unsigned int e);
     void addEdge(int vi, int vj);

@@ -55,9 +55,22 @@ void read_network(string file_path, Graph &graph) {
     int i = fscanf(fin,"%d%d", &vi,&vj);
     assert(i==2);
     graph = Graph(vi,vj);
+    printf("nodes:%d  edges:%d\n", vi, vj);
     while (fscanf(fin,"%d\t%d\n", &vi,&vj)==2)
     {
         graph.addEdge(vi, vj);
+    }
+    fclose(fin);
+}
+
+
+void output(string name, vector<vector<int>> &G){
+    FILE* fin=fopen(name.c_str(),"w");
+    for(vector<int> &vec:G){
+        for(int i:vec){
+            fprintf(fin,"%d\t",i);
+        }
+        fprintf(fin,"\n");
     }
     fclose(fin);
 }
@@ -77,16 +90,15 @@ void sccByboost(boostGraph &G){
 void sccBySNAP(const PNGraph G){
     double start = clock();
     TCnComV CnComV;
+    const TStr OutFNm = Env.GetIfArgPrefixStr("-o:", "graph", "Output file prefix");
     TSnap::GetSccs(G, CnComV);
     printf("SNAP scc:%d\ttime:%.2fs\n",CnComV.Len(),time_by(start));
+    TCnCom::SaveTxt(CnComV, TStr::Fmt("%s.scc.txt", OutFNm.CStr()), "Strongly connected components");
+    CnComV.Clr();
 }
 
-static vector<Vint> SCCG;
-static Vint DFN, LOW, st, viter, id;
-static int top, Tindex, stop, snum;
 
-
-void tarjan(int u, Graph &G){
+void tarjan(int u, Graph &G,vector<int> &DFN,vector<int> &LOW,vector<int> &viter,vector<int> &st,vector<int> &id,int &top,int &Tindex,int &stop, int &snum){
     int v;
     DFN[u] = LOW[u] = ++Tindex;
     G.visit[u] = true;
@@ -119,33 +131,65 @@ void tarjan(int u, Graph &G){
             stop--;
         }
     }
+
 }
 
 
-void scc(Graph &G){
+vector<vector<int>> scc(Graph &G){
     double start = clock();
     int vnums = G.vnums;
+    static vector<int> DFN, LOW, st, viter, id;
+    static int top, Tindex, stop, snum;
     DFN.resize(vnums); LOW.resize(vnums); viter.resize(vnums);st.resize(vnums);id.resize(vnums);
     top=-1; Tindex=0;stop=-1;
-    for(int i=0;i<vnums;i++){
-        if(!DFN[i])
-            tarjan(i,G);
+    for(int u=0;u<vnums;u++){
+        if(!DFN[u]){
+            int v;
+            DFN[u] = LOW[u] = ++Tindex;
+            G.visit[u] = true;
+            G.q[++top] = u;
+            st[++stop] =u;
+            while (stop!=-1){
+                u = st[stop];
+                for(auto &iter = viter[u];iter < G.neighbour[u].size();iter++) {
+                    v = G.neighbour[u][iter];
+                    if (!DFN[v]) {
+                        DFN[v] = LOW[v] = ++Tindex;
+                        G.visit[v] = true;
+                        G.q[++top] = v;
+                        st[++stop] = v;
+                        break;
+                    } else if (DFN[v] > DFN[u] && LOW[v] < LOW[u]) {
+                        LOW[u] = LOW[v];
+                    } else if (G.visit[v] && DFN[v] < LOW[u])
+                        LOW[u] = DFN[v];
+                }
+                if(u == st[stop]) {
+                    if (DFN[u] == LOW[u]) {
+                        do {
+                            v = G.q[top--];
+                            G.visit[v] = false;
+                            id[v] = snum;
+                        } while (v != u);
+                        snum++;
+                    }
+                    stop--;
+                }
+            }
+        }
     }
+    vector<vector<int>> SCCG;
     SCCG.resize(snum);
     DFN.assign(vnums,0);
     for(int i=0;i<vnums;i++){
         SCCG[id[i]].emplace_back(i);
     }
     printf("my scc:%d\ttime:%.2fs\n",SCCG.size(),time_by(start));
-//    for(int i=0;i<SCCG.size();i++){
-//        for(int val:SCCG[i])
-//            printf("%d ",val);
-//        printf("\n");
-//    }
-    Vint().swap(DFN);
-    Vint().swap(LOW);
-    Vint().swap(viter);
-    Vint().swap(st);
+    vector<int>().swap(DFN);
+    vector<int>().swap(LOW);
+    vector<int>().swap(viter);
+    vector<int>().swap(st);
+    return SCCG;
 }
 
 
@@ -153,7 +197,7 @@ int main(int argc, char *argv[]) {
 
     string filename = argv[1];
     int type = atoi(argv[2]);
-
+    string ofile = argv[3];
     if(type==BOOST){
         boostGraph G;
         read_network_Boost(filename,G);
@@ -165,7 +209,8 @@ int main(int argc, char *argv[]) {
     }else{
         Graph G;
         read_network(filename,G);
-        scc(G);
+        vector<vector<int>> SCC = scc(G);
+        output(ofile,SCC);
     }
 
     return 0;

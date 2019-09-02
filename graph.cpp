@@ -11,7 +11,6 @@ Graph::Graph(unsigned int v, unsigned int e) {
     visit.resize(v, false);
     visit_mark.resize(v, 0);
     q.resize(v);
-
 }
 
 void Graph::addEdge(int vi, int vj) {
