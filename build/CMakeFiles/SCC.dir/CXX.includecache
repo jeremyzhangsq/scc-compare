@@ -6,7 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/zhangsq/scc-compare/main.cpp
+/home/zhangsq/scc-compare/graph.cpp
+lib.h
+/home/zhangsq/scc-compare/lib.h
+
+/home/zhangsq/scc-compare/graph.h
+lib.h
+/home/zhangsq/scc-compare/lib.h
+
+/home/zhangsq/scc-compare/lib.h
 boost/config.hpp
 -
 iostream
@@ -15,6 +23,10 @@ vector
 -
 string
 -
+unordered_set
+-
+graph.h
+/home/zhangsq/scc-compare/graph.h
 boost/graph/strong_components.hpp
 -
 boost/graph/adjacency_list.hpp
@@ -25,6 +37,10 @@ boost/graph/graph_utility.hpp
 -
 snap/snap-core/Snap.h
 /home/zhangsq/scc-compare/snap/snap-core/Snap.h
+
+/home/zhangsq/scc-compare/main.cpp
+lib.h
+/home/zhangsq/scc-compare/lib.h
 
 /home/zhangsq/scc-compare/snap/glib-core/base.h
 windows.h
@@ -381,8 +397,6 @@ statplot.h
 /home/zhangsq/scc-compare/snap/snap-core/ghash.h
 
 /home/zhangsq/scc-compare/snap/snap-core/gio.h
-
-/home/zhangsq/scc-compare/snap/snap-core/graph.h
 
 /home/zhangsq/scc-compare/snap/snap-core/graphmp.h
 

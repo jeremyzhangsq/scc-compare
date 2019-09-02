@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SCC.dir/graph.cpp.o"
   "CMakeFiles/SCC.dir/main.cpp.o"
   "SCC.pdb"
   "SCC"
