@@ -14,7 +14,7 @@ void read_network_Boost(string file_path, boostGraph &G) {
     int n, m;
     int vi, vj;
     printf("file:%s\n",file_path.c_str());
-    fscanf(fin, "%d%d\n", &n,&m);
+    fscanf(fin, "%d\t%d\n", &n,&m);
     vector<int> node_deg=vector<int>(n);
     printf("nodes:%d  edges:%d\n", n, m);
     for(unsigned int i = 0;i<m;i++)
@@ -32,7 +32,7 @@ void read_network_SNAP(string file_path,const PNGraph G) {
     int n, m;
     int vi, vj;
     printf("file:%s\n",file_path.c_str());
-    fscanf(fin, "%d%d\n", &n,&m);
+    fscanf(fin, "%d\t%d\n", &n,&m);
     vector<int> node_deg=vector<int>(n);
     printf("nodes:%d  edges:%d\n", n, m);
     for (int i = 0; i < n; i++) {
@@ -98,49 +98,12 @@ void sccBySNAP(const PNGraph G){
 }
 
 
-void tarjan(int u, Graph &G,vector<int> &DFN,vector<int> &LOW,vector<int> &viter,vector<int> &st,vector<int> &id,int &top,int &Tindex,int &stop, int &snum){
-    int v;
-    DFN[u] = LOW[u] = ++Tindex;
-    G.visit[u] = true;
-    G.q[++top] = u;
-    st[++stop] =u;
-    while (stop!=-1){
-        u = st[stop];
-        for(auto &iter = viter[u];iter < G.neighbour[u].size();iter++) {
-            v = G.neighbour[u][iter];
-            if (!DFN[v]) {
-                DFN[v] = LOW[v] = ++Tindex;
-                G.visit[v] = true;
-                G.q[++top] = v;
-                st[++stop] = v;
-                break;
-            } else if (DFN[v] > DFN[u] && LOW[v] < LOW[u]) {
-                LOW[u] = LOW[v];
-            } else if (G.visit[v] && DFN[v] < LOW[u])
-                LOW[u] = DFN[v];
-        }
-        if(u == st[stop]) {
-            if (DFN[u] == LOW[u]) {
-                do {
-                    v = G.q[top--];
-                    G.visit[v] = false;
-                    id[v] = snum;
-                } while (v != u);
-                snum++;
-            }
-            stop--;
-        }
-    }
-
-}
-
 
 vector<vector<int>> scc(Graph &G){
     double start = clock();
     int vnums = G.vnums;
-    static vector<int> DFN, LOW, st, viter, id;
-    static int top, Tindex, stop, snum;
-    DFN.resize(vnums); LOW.resize(vnums); viter.resize(vnums);st.resize(vnums);id.resize(vnums);
+    vector<int> DFN(vnums,0), LOW(vnums,0), st(vnums,0), viter(vnums,0), id(vnums,0);
+    int top, Tindex, stop, snum=0;
     top=-1; Tindex=0;stop=-1;
     for(int u=0;u<vnums;u++){
         if(!DFN[u]){
